@@ -1,0 +1,21 @@
+.container {
+			width: 800px; 
+			margin: 0 auto; 
+			font-size: 16px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		h1, h2 {
+			color: darkgreen;
+		}
+
+		p {
+			text-align: justify;
+		}
+
+		.country-info {
+			padding-left: 45px;
+		}
