@@ -1,0 +1,46 @@
+/* MAIN */
+* {
+	box-sizing: border-box;
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* INLINE-BLOCK */
+.inline-block-box {
+	font-size: 0;
+}
+
+.inline-block-box > div {
+	display: inline-block;
+	font-size: 16px;
+	vertical-align: top;
+}
+
+/* TABLE-CELL */
+.table-cell-box> div {
+	display: table-cell;
+}
+
+/* COLORS */
+.color-1 {
+	background-color: lightcoral;
+}
+.color-2 {
+	background-color: darkgrey;
+}
+.color-3 {
+	background-color: mistyrose;
+}
+
+/* SIZES*/
+.w-200 {
+	width: 200px;
+}
+.w-400 {
+	width: 400px;
+}
+.w-800 {
+	width: 800px;
+}
