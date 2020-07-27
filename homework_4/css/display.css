@@ -1,7 +1,7 @@
 /* MAIN */
 * {
 	box-sizing: border-box;
-	color: transparent;
+	/*color: transparent;*/
 }
 .container {
 	width: 1200px;
