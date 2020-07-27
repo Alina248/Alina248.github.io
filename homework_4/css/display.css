@@ -1,10 +1,29 @@
 /* MAIN */
 * {
 	box-sizing: border-box;
+	color: transparent;
 }
 .container {
 	width: 1200px;
 	margin: 0 auto;
+}
+
+/* NAVIGATION */
+.navigation {
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+}
+a {
+	font-size: 20px;
+	color: black;
+	padding: 10px;
+	text-decoration: none;
+	border: 3px solid lightgrey;
+	border-radius: 5px;
+}
+a.active {
+	background-color: lightgrey;
 }
 
 /* INLINE-BLOCK */
@@ -24,13 +43,13 @@
 }
 
 /* COLORS */
-.color-1 {
+.color-coral {
 	background-color: lightcoral;
 }
-.color-2 {
+.color-grey {
 	background-color: darkgrey;
 }
-.color-3 {
+.color-rose {
 	background-color: mistyrose;
 }
 
