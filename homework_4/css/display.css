@@ -1,11 +1,12 @@
 /* MAIN */
 * {
 	box-sizing: border-box;
-	/*color: transparent;*/
+	/* color: transparent; */
 }
 .container {
 	width: 1200px;
 	margin: 0 auto;
+	font-size: 16px;
 }
 
 /* NAVIGATION */
@@ -15,7 +16,6 @@
 	padding: 10px;
 }
 a {
-	font-size: 20px;
 	color: black;
 	padding: 10px;
 	text-decoration: none;
@@ -23,7 +23,8 @@ a {
 	border-radius: 5px;
 }
 a.active {
-	background-color: lightcoral;
+	background-color: lightgrey;
+	font-size: 20px;
 }
 
 /* INLINE-BLOCK */
@@ -38,7 +39,7 @@ a.active {
 }
 
 /* TABLE-CELL */
-.table-cell-box > div {
+.table-cell-box> div {
 	display: table-cell;
 }
 
