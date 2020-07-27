@@ -38,7 +38,7 @@ a.active {
 }
 
 /* TABLE-CELL */
-.table-cell-box> div {
+.table-cell-box > div {
 	display: table-cell;
 }
 
