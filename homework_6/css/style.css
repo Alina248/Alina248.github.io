@@ -143,6 +143,7 @@ img {
 .top-photos > div {
 	width: 30%;
 	display: inline-block;
+	text-align: center;
 	vertical-align: middle;
 	position: relative;
 }
