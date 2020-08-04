@@ -80,3 +80,12 @@ a.active {
 .w-800 {
 	width: 800px;
 }
+.flex-w-200 {
+	flex: 0 1 200px;
+}
+.flex-w-400 {
+	flex: 0 1 400px;
+}
+.flex-w-800 {
+	flex: 0 1 800px;
+}
