@@ -152,7 +152,6 @@ img {
 }
 
 .top-photos > div >  span {
-	display: inline-block;
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -287,7 +286,6 @@ img {
 }
 
 .top-photos > div >  span {
-	display: inline-block;
 	position: absolute;
 	top: 50%;
     transform: translateY(-50%);
