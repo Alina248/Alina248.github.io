@@ -1,0 +1,299 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+	line-height: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* MAIN CSS */
+
+html, body {
+	scroll-behavior: smooth;
+}
+
+.container {
+	width: 800px; 
+	margin: 22px auto 50px; 
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	margin: 22px 0;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 20px;
+}
+
+h1, h2 {
+	color: darkgreen;
+}
+
+p {
+	margin: 16px 0;
+	text-align: justify;
+}
+
+a {
+	color: teal;
+}
+
+.country-info p,
+.country-info a {
+	padding-left: 45px;
+}
+
+img {
+	width: 30%;
+}
+
+.gallery {
+	text-align: center;
+}
+
+.gallery-text {
+	border-bottom: 1px dashed darkgreen; 
+	padding-bottom: 20px;	
+}
+
+.navigation {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+/* SIDE NAVIGATION */
+
+/* version 1 (flex) */
+.side-nav {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+.side-nav > div {
+	background-color: rgba(47, 79, 79,.8);
+	padding: 20px 0;
+	border-radius: 0 10px 10px 0;
+}
+.side-nav > div > a {
+	display: block;
+	padding: 10px;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+/* TOP PHOTOS */
+
+/* version 1 (margin-top: -...px) */
+.top-photos {
+	text-align: center;
+}
+.top-photos > div {
+	width: 30%;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+
+.top-photos > div img {
+	width: 100%;
+}
+
+.top-photos > div >  span {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: 32px;
+	margin-top: -16px;
+	background-color: rgba(0,0,0,.4);
+	color: #fff;
+	font-size: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DIFFERENT VERSIONS */
+
+
+/* ---side nagigation (other versions)--- */
+
+/* version 2 (line-height) */
+/* .side-nav {
+	background-color: green;
+	width: auto;
+	line-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.side-nav > div {
+	background-color: lightgreen;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+.side-nav > div > a {
+	display: block;
+} */
+
+/* version 3 (margin-top: -...px) */
+/* .side-nav {
+	background-color: green;
+	width: auto;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	height: 54px;
+	margin-top: -27px;
+}
+.side-nav > div {
+	background-color: lightgreen;
+	display: inline-block;
+	vertical-align: middle;
+}
+.side-nav > div > a {
+	display: block;
+} */
+
+/* version 4 (transform) */
+/* .side-nav {
+	background-color: green;
+	width: auto;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+.side-nav > div {
+	background-color: lightgreen;
+}
+.side-nav > div > a {
+	display: block;
+} */
+
+
+/* ---top photos (other versions)--- */
+
+/* version 2 (flex) */
+/* .top-photos {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+.top-photos > div {
+	width: 30%;
+	display: inline-flex;
+	position: relative;
+}
+
+.top-photos > div img {
+	width: 100%;
+}
+
+.top-photos > div >  span {
+	position: absolute; 
+	align-self: center;
+	background-color: rgba(0,0,0,.4); 
+	color: #fff; 
+	font-size: 40px; 
+	left: 0;
+	right: 0;
+	text-align: center;
+
+} */
+
+/* version 3 (transform) */
+/* .top-photos {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+.top-photos > div {
+	width: 30%;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+
+.top-photos > div img {
+	width: 100%;
+}
+
+.top-photos > div >  span {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.4);
+	color: #fff;
+	font-size: 26px;
+} */
