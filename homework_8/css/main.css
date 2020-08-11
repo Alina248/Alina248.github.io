@@ -78,7 +78,7 @@ h1, h2 {
 }
 
 h1.text-on-background {
-	background: url("../images/background.jpg") no-repeat 50% 0 / 100% auto;
+	background: url("../images/background.jpg") no-repeat 50% 50% / 100% auto;
 	/*background-attachment: fixed;*/
 	background-clip: text;
 	-webkit-background-clip: text;
