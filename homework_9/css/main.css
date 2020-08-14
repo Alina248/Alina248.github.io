@@ -1,0 +1,441 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+	line-height: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* MAIN CSS */
+
+html, body {
+	scroll-behavior: smooth;
+}
+
+.container {
+	width: 800px; 
+	margin: 22px auto 50px; 
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	margin: 22px 0;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 20px;
+}
+
+h1, h2 {
+	color: darkgreen;
+}
+
+h1.text-on-background {
+	background: url("../images/background.jpg") no-repeat 50% / 100% auto;
+	background-clip: text;
+	-webkit-background-clip: text;
+	font-size: 65px;
+	color: rgba(0,0,0,0);
+	padding: 40px 0;
+	border-top: 2px solid darkgreen;
+	border-bottom: 2px solid darkgreen;
+}
+
+p {
+	margin: 16px 0;
+	text-align: justify;
+}
+
+a {
+	color: teal;
+}
+
+.country-info p,
+.country-info a {
+	padding-left: 45px;
+}
+
+/* TOP NAVIGATION */
+
+.top-nav {
+  background-color: teal;
+  margin: 0 0 10px 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.top-nav:hover {
+  overflow: visible;
+}
+
+.top-nav ul li a{
+  display: block;
+  padding: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.top-nav ul li a:hover {
+  background-color: #fff;
+  color: teal;
+}
+
+.top-nav ul {
+  font-size: 0;
+  text-align: center;
+}
+
+.top-nav ul li {
+  position: relative;
+  background-color: teal;
+}
+
+.top-nav > ul > li {
+  display: inline-block;
+}
+
+/* with animation */
+.top-nav > ul > li > ul {
+  position: absolute;
+  left: 0;
+  top: -300%;
+  padding: 4px 0 0 0;
+  min-width: 150px;
+  opacity: 0;
+  transition: top .8s cubic-bezier(.55,.55,.53,1.48), opacity .5s ease .2s;
+}
+
+.top-nav > ul > li:hover > ul {
+  top: 100%;
+  opacity: 1;
+}
+
+.top-nav > ul > li > ul > li > ul {
+   position: absolute;
+   right: 0;
+   top: 0;
+   padding: 0 4px 0 0;
+   opacity: 0;
+   transition: right .8s ease, opacity .5s ease .2s;
+}
+
+.top-nav > ul > li > ul > li:hover > ul {
+  right: 100%;
+  opacity: 1;
+}
+
+/* without animation */
+/* .top-nav > ul > li > ul {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding: 4px 0 0 0;
+  min-width: 150px;
+  display: none;
+}
+
+.top-nav > ul > li > ul > li > ul {
+   position: absolute;
+   right: 100%;
+   top: 0;
+   padding: 0 4px 0 0;
+   display: none;
+}
+
+.top-nav ul li:hover > ul {
+  display: block;
+} */
+
+/* top-nav icons (version 1 - class selectors) */
+
+.home-link::before,
+.gallery-link::before,
+.positioning-link::after {
+  content: "";
+  background: url("../images/icons-sprite.png");
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.home-link::before,
+.gallery-link::before {
+  margin-right: 5px;
+}
+
+.home-link::before {
+  background-position: 0 0;
+}
+
+.home-link:hover::before {
+  background-position: -32px 0;
+}
+
+
+.gallery-link::before {
+  background-position: -64px 0;
+}
+
+.gallery-link:hover::before {
+  background-position: -96px 0;
+}
+
+.positioning-link::after {
+  background-position: -128px 0;
+  margin-left: 5px;
+}
+
+.positioning-link:hover::after {
+  background-position: -160px 0;
+}
+
+.basic-link::before {
+  content: "";
+  background: url("../images/icons-sprite.png") -192px 0;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.basic-link:hover::before {
+  background-position: -224px 0;
+}
+
+/* top-nav icons (version 2 - element selectors) */
+
+/* .top-nav > ul > li:not(:last-child) > a::before{
+  content: "";
+  background: url("../images/icons-sprite.png");
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}
+
+.top-nav > ul > li:not(:last-child) > a::before {
+  background-position: 0 0;
+}
+
+.top-nav > ul > li:not(:last-child) > a:hover::before {
+  background-position: -32px 0;
+}
+
+
+.top-nav > ul > li + li:not(:last-child) > a::before {
+  background-position: -64px 0;
+}
+
+.top-nav > ul > li + li:not(:last-child) > a:hover::before {
+  background-position: -96px 0;
+}
+
+.top-nav > ul > li + li + li > a::after {
+  content: "";
+  background: url("../images/icons-sprite.png") -128px 0;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: text-bottom;
+}
+
+.top-nav > ul > li + li + li > a:hover::after {
+  background-position: -160px 0;
+}
+
+.top-nav > ul > li > ul > li:first-child > a::before {
+  content: "";
+  background: url("../images/icons-sprite.png") -192px 0;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.top-nav > ul > li > ul > li:first-child > a:hover::before {
+  background-position: -224px 0;
+} */
+
+/* GALLERY PAGE */
+
+img {
+	width: 30%;
+}
+
+.gallery {
+	text-align: center;
+}
+
+.gallery-text {
+	border-bottom: 1px dashed darkgreen; 
+	padding-bottom: 20px;	
+}
+
+.to-main-page {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+/* SIDE NAVIGATION */
+
+/* flex */
+.side-nav {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 5;
+}
+.side-nav > div {
+	background-color: rgba(47, 79, 79,.8);
+	padding: 20px 0;
+	border-radius: 0 10px 10px 0;
+}
+.side-nav > div > a {
+	display: block;
+	padding: 10px;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+/* TOP PHOTOS */
+
+/* margin-top: -...px */
+.top-photos {
+	text-align: center;
+}
+.top-photos div {
+	width: 30%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+}
+
+.top-photos div img {
+	width: 100%;
+}
+
+.top-photos div span {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: 32px;
+	margin-top: -16px;
+	background-color: rgba(0,0,0,.4);
+	color: #fff;
+	font-size: 26px;
+}
+
+.top-photos div:hover span {
+	display: block;
+}
+
+/* LINKS LIST */
+.links-list {
+	margin: 40px 0 20px 0;
+	background: url("../images/background.jpg") no-repeat 50% / 100% auto;
+	text-align: center;
+}
+
+.links-list p {
+	margin: 0;
+	padding: 10px 0 0 0;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+}
+
+.links-list li,
+.links-list li a {
+	display: inline-block;
+}
+
+.links-list li a {
+	width: 150px;
+	height: 150px;
+	background: url('../images/logos-sprite.png');
+	margin: 20px;
+}
+
+.links-list li + li a {
+	background-position: -300px 0;
+}
+
+.links-list li + li + li a {
+	background-position: -600px 0;
+}
+
+.links-list li a:hover {
+	background-position: -150px 0;
+}
+
+.links-list li + li a:hover {
+	background-position: -450px 0;
+}
+
+.links-list li + li + li a:hover {
+	background-position: -750px 0;
+}
+
