@@ -108,12 +108,7 @@ a {
   background-color: teal;
   margin: 0 0 10px 0;
   position: relative;
-  overflow: hidden;
   z-index: 5;
-}
-
-.top-nav:hover {
-  overflow: visible;
 }
 
 .top-nav ul li a{
