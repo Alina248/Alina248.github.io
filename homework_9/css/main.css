@@ -196,51 +196,61 @@ a {
 
 /* top-nav icons (version 1 - class selectors) */
 
+.top-nav .home-link,
+.top-nav .gallery-link {
+  padding-left: 44px;
+}
+
+.top-nav .positioning-link {
+  padding-right: 44px;
+}
+
 .home-link::before,
 .gallery-link::before,
 .positioning-link::after {
   content: "";
-  background: url("../images/icons-sprite.png");
+  background: url("../images/sprites.png");
   width: 32px;
   height: 32px;
-  display: inline-block;
   vertical-align: text-bottom;
+  position: absolute;
+  top: 8px;
 }
 
 .home-link::before,
 .gallery-link::before {
-  margin-right: 5px;
+  left: 6px;
 }
 
 .home-link::before {
-  background-position: 0 0;
+  background-position: 0 -150px;
 }
 
 .home-link:hover::before {
-  background-position: -32px 0;
+  background-position: -32px -150px;
 }
 
 
 .gallery-link::before {
-  background-position: -64px 0;
+  background-position: -64px -150px;
 }
 
 .gallery-link:hover::before {
-  background-position: -96px 0;
+  background-position: -96px -150px;
 }
 
 .positioning-link::after {
-  background-position: -128px 0;
-  margin-left: 5px;
+  background-position: -128px -150px;
+  right: 6px;
 }
 
 .positioning-link:hover::after {
-  background-position: -160px 0;
+  background-position: -160px -150px;
 }
 
 .basic-link::before {
   content: "";
-  background: url("../images/icons-sprite.png") -192px 0;
+  background: url("../images/sprites.png") -192px -150px;
   width: 32px;
   height: 32px;
   position: absolute;
@@ -249,14 +259,14 @@ a {
 }
 
 .basic-link:hover::before {
-  background-position: -224px 0;
+  background-position: -224px -150px;
 }
 
 /* top-nav icons (version 2 - element selectors) */
 
 /* .top-nav > ul > li:not(:last-child) > a::before{
   content: "";
-  background: url("../images/icons-sprite.png");
+  background: url("../images/sprites.png");
   width: 32px;
   height: 32px;
   display: inline-block;
@@ -265,25 +275,25 @@ a {
 }
 
 .top-nav > ul > li:not(:last-child) > a::before {
-  background-position: 0 0;
+  background-position: 0 -150px;
 }
 
 .top-nav > ul > li:not(:last-child) > a:hover::before {
-  background-position: -32px 0;
+  background-position: -32px -150px;
 }
 
 
 .top-nav > ul > li + li:not(:last-child) > a::before {
-  background-position: -64px 0;
+  background-position: -64px -150px;
 }
 
 .top-nav > ul > li + li:not(:last-child) > a:hover::before {
-  background-position: -96px 0;
+  background-position: -96px -150px;
 }
 
 .top-nav > ul > li + li + li > a::after {
   content: "";
-  background: url("../images/icons-sprite.png") -128px 0;
+  background: url("../images/sprites.png") -128px -150px;
   width: 32px;
   height: 32px;
   display: inline-block;
@@ -297,7 +307,7 @@ a {
 
 .top-nav > ul > li > ul > li:first-child > a::before {
   content: "";
-  background: url("../images/icons-sprite.png") -192px 0;
+  background: url("../images/sprites.png") -192px -150px;
   width: 32px;
   height: 32px;
   position: absolute;
@@ -306,7 +316,7 @@ a {
 }
 
 .top-nav > ul > li > ul > li:first-child > a:hover::before {
-  background-position: -224px 0;
+  background-position: -224px -150px;
 } */
 
 /* GALLERY PAGE */
@@ -413,7 +423,7 @@ img {
 .links-list li a {
 	width: 150px;
 	height: 150px;
-	background: url('../images/logos-sprite.png');
+	background: url('../images/sprites.png');
 	margin: 20px;
 }
 
