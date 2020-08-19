@@ -1,0 +1,241 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+	line-height: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+.container {
+	min-width: 100vw;
+	min-height: 100vh;
+	margin: 0 auto;
+	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)), url("pexels-andrew-neel-3178881.jpg") no-repeat 50% 0 / cover;			
+	text-align: center;
+}
+.row-1 {
+	font-size: 0; 
+	padding: 50px 0;
+}
+.row-1 > div,
+.row-2 > div {
+	display: inline-block;
+}
+
+.wrench {
+	padding: 132px 0 58px 52px;
+}
+.wrench .basis {
+	width: 200px;
+	height: 40px;
+	background: grey;
+	border-radius: 0 10% 10% 0 / 0 50% 50% 0;
+	background: radial-gradient(circle at 90%, transparent 6%, grey 6%);
+	transform: rotate(45deg);
+}
+.wrench .basis::before {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: transparent;
+	border-radius: 50% 45% 45% 50% / 22% 50% 50% 22%;
+	border-top: 22px solid grey;
+	border-right: 26px solid grey;
+	border-bottom: 22px solid grey;
+	transform: translateY(-50%);
+
+	position: absolute;
+	top: 50%;
+	left: -80px;
+} 
+
+.nut {
+	padding: 0 30px;
+}
+.nut .basis {
+	  width: 60px;
+	  height: 100px;
+	  background: radial-gradient(circle, transparent 30%, grey 30%);
+	  position: relative;
+}
+.nut .basis::before {
+	  content: "";
+	  width: 0;
+	  height: 0;
+	  border-top: 50px solid transparent;
+	  border-bottom: 50px solid transparent;
+	  border-right: 30px solid grey;
+
+	  position: absolute;
+	  top: 0;
+	  right: 100%;
+}
+.nut .basis::after {
+	  content: "";
+	  width: 0;
+	  height: 0;
+	  border-top: 50px solid transparent;
+	  border-bottom: 50px solid transparent;
+	  border-left: 30px solid grey;
+
+	  position: absolute;
+	  top: 0;
+	  left: 100%;
+}
+
+
+.screw {
+	padding: 32px 0 32px 8px;
+}
+.screw .basis {
+	width: 140px;
+	height: 26px;
+	background: linear-gradient(130deg, grey 35%, darkgrey 35% 40%, grey 40% 50%, darkgrey 50% 55%, grey 55% 65%, darkgrey 65% 70%, grey 70% 80%, darkgrey 80% 85%, grey 85%);
+	position: relative;
+}
+.screw .basis::before,
+.screw .basis::after {
+	content: "";
+	width: 30px;
+	height: 40px;
+	background: grey;
+	position: absolute;
+	right: 118px;
+}
+.screw .basis::before {
+	border-top-left-radius: 90%;
+	bottom: 16px;
+}
+.screw .basis::after {
+	border-bottom-left-radius: 90%;
+	top: 16px;
+}
+
+.sail-boat {
+	padding: 300px 72px 0px 50px;
+}
+.sail-boat .basis {
+	width: 270px;
+	height: 50px;
+	background: grey;
+	background: radial-gradient(circle, lightblue 30%, grey 30%) repeat 0 0 / 64px 50px;
+	position: relative;
+}
+.sail-boat .basis::before {
+	content: "";
+	width: 0;
+	border-top: 50px solid transparent;
+	border-right: 50px solid grey;
+	border-bottom: 50px solid transparent;
+
+	position: absolute;
+	bottom: 0;
+	right: 100%;
+}
+.sail-boat .basis::after {
+	content: "";
+	width: 100px;
+	height: 50px;
+	background: grey;
+	transform-origin: 0 100%;
+	transform: rotate(-45deg);
+	position: absolute;
+
+	bottom: 0;
+	left: 100%;
+}
+.sail-boat .sail {
+	width: 10px;
+	height: 300px;
+	background: grey;
+	transform: translateX(-50%);
+
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+}
+.sail-boat .sail::before {
+	content: "";
+	width: 325px;
+	height: 300px;
+	border-radius: 50%;
+	border-left: 80px solid teal;
+	border-right: 50px solid transparent;
+	background: transparent;
+	transform: translateX(-50%);
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+.sail-boat .sail::after {
+	content: "";
+	width: 200px;
+	height: 200px;
+	background: teal;
+	background: radial-gradient(circle at 100% 100%, transparent 70%, teal 70%);
+	transform: rotate(135deg) skew(5deg, 5deg);
+	
+	position: absolute;
+	bottom: 29px;
+	left: -90px;
+}
+.sail-boat .flag::before {
+	content: "";
+	width: 100px;
+	height: 0;
+	border-top: 20px solid coral;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid coral;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
