@@ -74,7 +74,6 @@ table {
 .wrench .basis {
 	width: 200px;
 	height: 40px;
-	background: grey;
 	border-radius: 0 10% 10% 0 / 0 50% 50% 0;
 	background: radial-gradient(circle at 90%, transparent 6%, grey 6%);
 	transform: rotate(45deg);
