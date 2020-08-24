@@ -109,12 +109,12 @@ select {
 input[type=checkbox] {
 	display: none;
 }
-input[type="checkbox"] + label {
+input[type=checkbox] + label {
 	display: inline-block;
 	padding-left: 105px;
 	position: relative;
 }
-input[type="checkbox"] + label::before {
+input[type=checkbox] + label::before {
 	content: "";
 	border: 1px solid teal;
 	border-radius: 15px;
@@ -127,7 +127,7 @@ input[type="checkbox"] + label::before {
 	transition: all .7s ease;
 }
 
-input[type="checkbox"] + label::after{
+input[type=checkbox] + label::after{
    content: "";
    position: absolute;
    top: -2.5px;
@@ -139,11 +139,11 @@ input[type="checkbox"] + label::after{
    transition: all .7s ease;
 }
 
-input[type="checkbox"]:checked + label::before{
+input[type=checkbox]:checked + label::before{
     background-color: teal;
 }
 
-input[type="checkbox"]:checked + label::after{
+input[type=checkbox]:checked + label::after{
     left: 72px;
     background: #fff;
 }
