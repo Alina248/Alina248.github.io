@@ -82,7 +82,7 @@ select:focus {
 }
 .select-wrap {
 	position: relative;
-	height: 38px;
+	height: 40px;
 }
 .select-wrap::after {
 	content: "";
