@@ -77,12 +77,11 @@ input::placeholder {
 }
 input:focus,
 select:focus {
-	border: 2px inset teal;
-	outline: none;
+	outline: 2px inset teal;
+	/*outline: none;*/
 }
 .select-wrap {
 	position: relative;
-	height: 38px;
 }
 .select-wrap::after {
 	content: "";
@@ -98,6 +97,7 @@ select:focus {
 	top: 50%;
 	right: 0;
 	transform: translateY(-50%);
+	pointer-events:none;
 }
 select {
 	appearance: none;
