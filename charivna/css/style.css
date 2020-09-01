@@ -481,7 +481,7 @@ header {
 	font-size: 20px;
 	padding: 20px 10px 40px;
 	max-width: 25%;
-	background: url("../images/bookmark-1.png") top left / cover no-repeat;
+	background: url("../images/bookmark-1.png") top left / cover;
 
 	position: absolute;
 	top: 4%;
@@ -492,18 +492,18 @@ header {
 
 .cookbook > p + p {
 	left: 38%;
-	background: url("../images/bookmark-2.png") top left / cover no-repeat;
+	background: url("../images/bookmark-2.png") top left / cover;
 }
 
 .cookbook > p + p + p {
 	left: 57%;
-	background: url("../images/bookmark-3.png") top left / cover no-repeat;
+	background: url("../images/bookmark-3.png") top left / cover;
 }
 
 .cookbook > p:hover,
 .cookbook > p.active {
 	top: 2%;
-	background: url("../images/bookmark-active.png") no-repeat;
+	background: url("../images/bookmark-active.png");
 }
 
 .cookbook .product-picture {
