@@ -1205,7 +1205,8 @@ footer .mailing-form > input[type=email]::placeholder {
 	display: block;
 	color: #b1b1b1;
 	font-size: 20px;
-	line-height: 30px;	
+	line-height: 30px;
+	font-family: 'PFDinTextCompPro Thin';
 }
 
 footer .mailing-form > input[type=submit] {
