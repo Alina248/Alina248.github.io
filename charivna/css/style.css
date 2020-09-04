@@ -1198,6 +1198,7 @@ footer .mailing-form > input[type=email] {
 	border-bottom: 1px solid #b1b1b1;
 	outline: none;
 	margin-bottom: 30px;
+	text-align: center;
 }
 
 footer .mailing-form > label {
