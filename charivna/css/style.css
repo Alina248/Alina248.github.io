@@ -1199,15 +1199,15 @@ footer .mailing-form > input[type=email] {
 	outline: none;
 	margin-bottom: 30px;
 	text-align: center;
-	color: #b1b1b1;
+	
 }
 
+footer .mailing-form > input[type=email],
 footer .mailing-form > input[type=email]::placeholder {
-	display: block;
 	color: #b1b1b1;
+	font-family: 'PFDinTextCompPro Thin';
 	font-size: 20px;
 	line-height: 30px;
-	font-family: 'PFDinTextCompPro Thin';
 }
 
 footer .mailing-form > input[type=submit] {
