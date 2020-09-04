@@ -989,7 +989,7 @@ header > nav > ul > li > a {
 	position: relative;
 }
 
-.contact-us > iframe {
+.contact-us > #googleMap {
 	border: none;
 	position: absolute;
 	top: 0
