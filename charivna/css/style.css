@@ -1199,6 +1199,7 @@ footer .mailing-form > input[type=email] {
 	outline: none;
 	margin-bottom: 30px;
 	text-align: center;
+	color: #b1b1b1;
 }
 
 footer .mailing-form > input[type=email]::placeholder {
