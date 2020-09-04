@@ -183,16 +183,7 @@
 	<section class="contact-us">
 		<!-- api version -->
 		<div id="googleMap"></div>
-		<script>
-		    function myMap() {
-			var mapCenter = {lat: 49.9797623, lng: 36.3049468};
-			var charivnaShop = {lat: 49.9797553, lng: 36.3088387};
-			var map = new google.maps.Map(document.getElementById('googleMap'), {zoom: 17, center: mapCenter});
-			var marker = new google.maps.Marker({position: charivnaShop, map: map, icon: "images/map-sign.png"});
-		    }
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9BLy87BmtE2mxBUwDOro7MyPmA_ngbBY&callback=myMap"></script>
-
+		
 		<!-- simple embedded version -->
 		<!-- <iframe id="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2021.7370957173698!2d36.306405045878286!3d49.97972666735986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x82ea051944a1acdb!2z0JrQvtC90LTQuNGC0LXRgNGB0YzQutCwINGE0LDQsdGA0LjQutCwICLQp9Cw0YDRltCy0L3QsCDQnNC-0LfQsNGX0LrQsCI!5e0!3m2!1suk!2sua!4v1599220743418!5m2!1suk!2sua"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
 		
@@ -255,6 +246,16 @@
 			</ul>
 		</div>
 	</footer>
+	
+	<script>
+                function myMap() {
+			var mapCenter = {lat: 49.9797623, lng: 36.3049468};
+			var charivnaShop = {lat: 49.9797553, lng: 36.3088387};
+			var map = new google.maps.Map(document.getElementById('googleMap'), {zoom: 17, center: mapCenter});
+			var marker = new google.maps.Marker({position: charivnaShop, map: map, icon: "images/map-sign.png"});
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9BLy87BmtE2mxBUwDOro7MyPmA_ngbBY&callback=myMap"></script>
 	
 </body>
 </html>
