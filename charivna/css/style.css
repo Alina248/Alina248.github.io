@@ -985,7 +985,17 @@ header > nav > ul > li > a {
 /* CONTACT US */
 .contact-us {
 	width: 100%;
-	background: url("../images/map-3.png") center / cover;
+	/*background: url("../images/map-3.png") center / cover;*/
+	position: relative;
+}
+
+.contact-us > iframe {
+	border: none;
+	position: absolute;
+	top: 0
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .contact-us form {
@@ -993,6 +1003,8 @@ header > nav > ul > li > a {
 	padding: 50px 20px 35px;
 	background: #67bbaf;
 	text-align: center;
+	position: relative;
+	z-index: 5;
 }
 
 .contact-us form > h2 {
