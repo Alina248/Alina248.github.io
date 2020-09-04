@@ -1201,7 +1201,7 @@ footer .mailing-form > input[type=email] {
 	text-align: center;
 }
 
-footer .mailing-form > label {
+footer .mailing-form > input[type=email]::placeholder {
 	display: block;
 	color: #b1b1b1;
 	font-size: 20px;
