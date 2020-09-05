@@ -124,6 +124,18 @@ a {
 	color: #959595;
 }
 
+h2 {
+	text-align: center;
+	color: #65baaf;
+	font-family: Flow, sans;
+	font-size: 40px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+
 /* HEADER */
 
 header {
@@ -446,17 +458,6 @@ header > nav > ul > li > a {
 	z-index: -1;
 }
 
-.products h2 {
-	text-align: center;
-	color: #65baaf;
-	font-family: Flow, sans;
-	font-size: 40px;
-	font-weight: 700;
-	text-transform: uppercase;
-	margin-bottom: 50px;
-	position: relative;
-}
-
 .products h2::before {
 	content: "";
 	background: url("../images/css_sprites.png") -10px -125px, #fff;
@@ -730,17 +731,6 @@ header > nav > ul > li > a {
 	padding: 60px 0;
 }
 
-.advantages > h2 {
-	text-align: center;
-	color: #65baaf;
-	font-family: Flow, sans;
-	font-size: 40px;
-	font-weight: 700;
-	text-transform: uppercase;
-	margin-bottom: 50px;
-	position: relative;
-}
-
 .advantages h2::before {
 	content: "";
 	background: url("../images/css_sprites.png") -284px -134px, #fff;
@@ -826,13 +816,6 @@ header > nav > ul > li > a {
 }
 
 .values > h2 {
-	text-align: center;
-	color: #65baaf;
-	font-family: Flow, sans;
-	font-size: 40px;
-	font-weight: 700;
-	text-transform: uppercase;
-	position: relative;
 	margin-bottom: 100px;
 }
 
@@ -891,12 +874,6 @@ header > nav > ul > li > a {
 }
 
 .news h2 {
-	text-align: center;
-	color: #65baaf;
-	font-family: Flow, sans;
-	font-size: 40px;
-	font-weight: 700;
-	text-transform: uppercase;
 	margin-bottom: 75px;
 	position: relative;
 }
@@ -919,37 +896,37 @@ header > nav > ul > li > a {
 	margin-bottom: 50px;
 }
 
-.articles > div {
+.articles > article {
 	float: left;
 	width: 50%;
 	font-size: 16px;
 }
 
-.articles > div:nth-child(odd) {
+.articles > article:nth-child(odd) {
 	padding-right: 40px;
 }
 
-.news .articles > div:nth-child(even) {
+.news .articles > article:nth-child(even) {
 	padding-left: 40px;
 }
 
-.articles > div > * {
+.articles > article > * {
 	display: inline-block;
 	margin-bottom: 20px;
 }
 
-.articles > div > img {
+.articles > article > img {
 	width: 30%;
 	max-height: 100px;
 	vertical-align: top;
 }
 
-.articles > div > div {
+.articles > article > div {
 	width: 65%;
 	padding-left: 20px;
 }
 
-.articles > div h3 {
+.articles > article h3 {
 	color: #caa977;
 	font-family: "PFDinTextCompPro Medium";
 	font-size: 22px;
@@ -958,7 +935,7 @@ header > nav > ul > li > a {
 	margin-bottom: 10px;
 }
 
-.articles > div p {
+.articles > article p {
 	color: #7d7d7d;
 	font-size: 18px;
 	line-height: 22px; 
@@ -1240,19 +1217,20 @@ footer .social-media {
 	vertical-align: top;
 }
 
-footer .social-media > li {
+footer .social-media > li,
+footer .social-media > li > a {
 	display: inline-block;
-	cursor: pointer;
 }
 
-footer .social-media> .vk {
+footer .social-media > li > a {
+	width: 49px;
+	height: 48px;
+}
+
+footer .social-media> .vk > a {
 	background: url("../images/css_sprites.png") -413px -63px;;
-	width: 49px;
-	height: 48px;
 }
 
-footer .social-media> .facebook {
+footer .social-media> .facebook > a {
 	background: url("../images/css_sprites.png") -413px -5px;;
-	width: 49px;
-	height: 48px;
 }
