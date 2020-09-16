@@ -993,7 +993,7 @@ header > nav > ul > li > a {
 	margin-bottom: 40px;
 }
 
-.contact-us form > input[type=text],
+.contact-us form > input,
 .contact-us form > textarea {
 	border: 1px solid #fff;
 	background-color: #8dccc3;
