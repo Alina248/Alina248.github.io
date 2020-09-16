@@ -172,7 +172,7 @@ header > div > .contacts > li::before {
     left: 0;
 }
 
-header > div > contacts > li + li::before {
+header > div > .contacts > li + li::before {
     background: url(../images/css_sprites.png) -136px -196px;
     width: 28px;
     height: 12px;
