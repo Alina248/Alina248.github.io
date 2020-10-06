@@ -18,6 +18,9 @@ rgba(255,195,228,1)
 rgba(248,232,225,1)
 #f7f6f5
 rgba(247,246,245,1)
+
+#b992d9
+rgba(185,146,217,1)
 */
 
 @font-face {
@@ -97,7 +100,7 @@ ul li {
 	color: #5b5da8;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:active {
 	font-weight: 900;
 	color: #5b5da8;
 }
@@ -235,6 +238,10 @@ ul li {
 	color: #5b5da8;
 	padding: 7px 15px;
 	white-space: normal;
+}
+
+.catalog-menu .dropdown-menu.show a:active {
+	background-color: #f8f9fa;
 }
 
 /* search */
