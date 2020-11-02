@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%; /* 10px */
+    font-weight: 300;
+    color: #cfcfcf;
+    position: relative;
+}
+
+.bg-img {
+    background-image: url("../img/bg-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(.5rem);
+    filter: blur(.5rem);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    padding: 8rem;
+    min-height: 100vh;
+}
+
+.main-box {
+    border-radius: 1rem;
+    margin: 0 auto;
+    max-width: 96rem;
+    min-height: 70vh;
+    padding: 8rem 5rem;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,.8)),to(rgba(0,0,0,.8)));
+    background-image: -o-linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8));
+    background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8));
+}
+
+.text h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.text p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 5rem;
+}
+
+.portfolio-list {
+    font-size: 0;
+}
+
+.portfolio-list li {
+    display: inline-block;
+    font-size: 1.6rem;
+    position: relative;
+    vertical-align: top;
+}
+
+.portfolio-list img {
+    max-width: 100%;
+    height: auto;
+}
+
+.portfolio-list div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.6)), to(rgba(0,0,0,.6)));
+    background-image: -o-linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6));
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6));
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.portfolio-list li:hover div  {
+    opacity: 0;
+}
+
+.portfolio-list h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #f7f7f7;
+    text-shadow: 0 .5rem .5rem #484848;
+    -webkit-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+[class^="col-"]:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.col-1-of-4 {
+    width: calc((100% - 3 * 2rem) / 4);
+}
+
+.email-box {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.email-box a:link,
+.email-box a:visited {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    color: #cfcfcf;
+    text-decoration: none;
+    padding-left: 32px;
+    position: relative;
+}
+
+.email-box a::before {
+    content: "";
+    background: url("../img/email-icon.png");
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1200px) {
+    html,
+    body {
+        font-size: 56.25%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    html,
+    body {
+        font-size: 50%;
+    }
+
+    .main-box {
+        padding: 5rem 5rem;
+    }
+
+    .email-box {
+        margin-top: 3rem;
+    }
+
+    [class^="col-"]:not(:nth-child(odd)) {
+        margin-bottom: 2rem;
+    }
+
+    [class^="col-"]:not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    [class^="col-"]:not(:nth-child(odd)) {
+        margin-right: 0;
+    }
+
+    .col-md-1-of-2 {
+        width: calc((100% - 2rem) / 2);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html,
+    body {
+        font-size: 45%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        padding: 5rem;
+    }
+
+    .portfolio-list li {
+        display: block;
+        width: 100%;
+    }
+
+    [class^="col-"]{
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main {
+        padding: 3rem;
+    }
+}
