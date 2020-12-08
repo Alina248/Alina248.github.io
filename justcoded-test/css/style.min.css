@@ -113,7 +113,7 @@ a {
     transform: translateX(-50%); }
 
 /* social media */
-.social-media li a {
+.social-media li a:link, .social-media li a:visited {
   display: inline-block;
   width: 3.4rem;
   height: 3.4rem;
@@ -123,15 +123,17 @@ a {
   border-radius: 50%;
   position: relative;
   margin-left: .5rem; }
-  .social-media li a:hover {
-    background-color: #b5a263; }
-  .social-media li a i {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+
+.social-media li a:hover, .social-media li a:active {
+  background-color: #b5a263; }
+
+.social-media li a i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 /* button */
 .btn {
@@ -174,15 +176,15 @@ header {
       @media only screen and (max-width: 900px) {
         header .wrapper .nav-icon {
           display: block; } }
-    header .wrapper nav a {
+    header .wrapper nav a:link, header .wrapper nav a:visited {
       font-size: 1.4rem;
       text-transform: uppercase;
       padding: 0 1.5rem 3.8rem;
       border-bottom: 2px solid transparent;
       -webkit-transition: border-bottom .5s ease;
       transition: border-bottom .5s ease; }
-      header .wrapper nav a:hover {
-        border-bottom: 2px solid #b5a263; }
+    header .wrapper nav a:hover, header .wrapper nav a:active {
+      border-bottom: 2px solid #b5a263; }
     header .wrapper nav.active {
       display: block;
       width: 100%;
@@ -461,15 +463,15 @@ footer .row-2 {
       @media only screen and (max-width: 900px) {
         footer .row-2 .wrapper .copyright {
           margin-bottom: 2rem; } }
-  footer .row-2 .social-media li a {
+  footer .row-2 .social-media li a:link, footer .row-2 .social-media li a:visited {
     border: 1px solid #61656b;
     background-color: #24282f; }
-    footer .row-2 .social-media li a:hover {
-      border: 1px solid #b5a263;
-      background-color: #b5a263; }
-      footer .row-2 .social-media li a:hover i {
-        color: #fff; }
-    footer .row-2 .social-media li a i {
-      color: #61656b; }
+  footer .row-2 .social-media li a:hover, footer .row-2 .social-media li a:active {
+    border: 1px solid #b5a263;
+    background-color: #b5a263; }
+    footer .row-2 .social-media li a:hover i, footer .row-2 .social-media li a:active i {
+      color: #fff; }
+  footer .row-2 .social-media li a i {
+    color: #61656b; }
 
 /*# sourceMappingURL=style.min.css.map */
