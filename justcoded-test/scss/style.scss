@@ -492,47 +492,54 @@ footer {
         line-height: 2.4rem;
       }
     
-      form input[type=email] {
-        width: 100%;
-        background-color: $color-dark-grey;
-        border: 1px solid $color-grey;
-        padding: 1rem;
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-        color: $color-white;
-    
-        &:-webkit-autofill,
-        &:-webkit-autofill:hover, 
-        &:-webkit-autofill:focus, 
-        &:-webkit-autofill:active  {
-          -webkit-box-shadow: 0 0 0 3rem $color-dark-blue inset !important;
-          -webkit-text-fill-color: $color-white;
+      form {
+        .form-message {
+          color: $color-white;
+          font-weight: 300;
         }
 
-        &::placeholder {
-          color: $color-grey;
+        input[type=email] {
+          width: 100%;
+          background-color: $color-dark-grey;
+          border: 1px solid $color-grey;
+          padding: 1rem;
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+          color: $color-white;
+      
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover, 
+          &:-webkit-autofill:focus, 
+          &:-webkit-autofill:active  {
+            -webkit-box-shadow: 0 0 0 3rem $color-dark-blue inset !important;
+            -webkit-text-fill-color: $color-white;
+          }
+  
+          &::placeholder {
+            color: $color-grey;
+          }
+      
+          &:focus {
+            outline: 1px solid $color-gold;
+          }
         }
-    
-        &:focus {
-          outline: 1px solid $color-gold;
-        }
-      }
-    
-      form input[type=submit] {
-        width: 100%;
-        background-color: $color-gold;
-        color: $color-white;
-        text-transform: uppercase;
-        border: none;
-        padding: 1rem 0;
-        transition: all .3s ease;
-    
-        &:hover,
-        &:active {
-          background-color: $color-light-grey;
-          outline: none;
-          cursor: pointer;
-          color: $color-gold;
+
+        input[type=submit] {
+          width: 100%;
+          background-color: $color-gold;
+          color: $color-white;
+          text-transform: uppercase;
+          border: none;
+          padding: 1rem 0;
+          transition: all .3s ease;
+      
+          &:hover,
+          &:active {
+            background-color: $color-light-grey;
+            outline: none;
+            cursor: pointer;
+            color: $color-gold;
+          }
         }
       }
     }
