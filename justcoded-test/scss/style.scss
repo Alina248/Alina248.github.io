@@ -81,16 +81,20 @@ a {
 
 .social-media {
   li a {
-    display: inline-block;
-    width: 3.4rem;
-    height: 3.4rem;
-    transition: all .5s ease;
-    background-color: #dedede;
-    border-radius: 50%;
-    position: relative;
-    margin-left: .5rem;
+    &:link,
+    &:visited {
+      display: inline-block;
+      width: 3.4rem;
+      height: 3.4rem;
+      transition: all .5s ease;
+      background-color: #dedede;
+      border-radius: 50%;
+      position: relative;
+      margin-left: .5rem;
+    }
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $color-gold;
     }
 
@@ -152,13 +156,17 @@ header {
     nav {
 
       a {
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        padding: 0 1.5rem 3.8rem;
-        border-bottom: 2px solid transparent;
-        transition: border-bottom .5s ease;
-  
-        &:hover {
+        &:link,
+        &:visited {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          padding: 0 1.5rem 3.8rem;
+          border-bottom: 2px solid transparent;
+          transition: border-bottom .5s ease;
+        }
+        
+        &:hover,
+        &:active {
           border-bottom: 2px solid $color-gold;
         }
       }
@@ -546,10 +554,14 @@ footer {
     }
   
     .social-media li a {
-      border: 1px solid $color-grey;
-      background-color: $color-dark-blue;
+      &:link,
+      &:visited {
+        border: 1px solid $color-grey;
+        background-color: $color-dark-blue;
+      }
   
-      &:hover {
+      &:hover,
+      &:active {
         border: 1px solid $color-gold;
         background-color: $color-gold;
   
