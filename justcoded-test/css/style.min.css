@@ -414,6 +414,9 @@ footer .row-1 {
     font-size: 1.4rem;
     color: #61656b;
     line-height: 2.4rem; }
+  footer .row-1 .wrapper form .form-message {
+    color: #fff;
+    font-weight: 300; }
   footer .row-1 .wrapper form input[type=email] {
     width: 100%;
     background-color: #2b2f35;
