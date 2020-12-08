@@ -1,0 +1,566 @@
+@import "reset";
+@import "mixins";
+@import "variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+@font-face {
+  font-family: 'NexaBold';
+  src: url('../fonts/Nexa/NexaBold.eot');
+  src: local('NexaBold'), url('../fonts/Nexa/NexaBold.woff') format('woff'), url('../fonts/Nexa/NexaBold.ttf') format('truetype');
+}
+
+/* main css */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-port) {
+    font-size: 58%;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: $default-font-size;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 2.4rem;
+  font-family: 'NexaBold', sans-serif;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: $color-dark-blue;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+a {
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: $wrapper-width-1;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.underline {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 7.8rem;
+    border-bottom: 2px solid $color-gold;
+    transform: translateX(-50%);
+  }
+}
+
+/* social media */
+
+.social-media {
+  li a {
+    display: inline-block;
+    width: 3.4rem;
+    height: 3.4rem;
+    transition: all .5s ease;
+    background-color: #dedede;
+    border-radius: 50%;
+    position: relative;
+    margin-left: .5rem;
+
+    &:hover {
+      background-color: $color-gold;
+    }
+
+    i {
+      color: $color-white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }  
+}
+
+/* button */
+
+.btn {
+  display: inline-block;
+  color: $color-dark-blue;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  border: 1px solid $color-dark-blue;
+  border-radius: 3rem;
+  padding: 1.8rem 4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .5s ease;
+
+  &:hover {
+    border: 1px solid $color-gold;
+    background-color: $color-gold;
+    color: $color-white;
+  }
+}
+
+header {
+  color: $color-white;
+  background-color: $color-dark-blue; 
+  position: relative;
+  transition: all .5s ease;
+
+  .wrapper {
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.8rem 1.8rem;
+    transition: all .5s ease;
+
+    .logo {
+      margin: 0 3rem 0 .7rem;
+    }
+
+    .nav-icon {
+      display: none;
+
+      @include respond(tab-port) {
+        display: block;
+      }
+    }
+
+    nav {
+
+      a {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 0 1.5rem 3.8rem;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom .5s ease;
+  
+        &:hover {
+          border-bottom: 2px solid $color-gold;
+        }
+      }
+
+      &.active {
+        display: block;
+        width: 100%;
+        text-align: right;
+        margin-top: 2rem;
+        border-bottom: 2px solid transparent;
+        transition: all .5s ease;
+
+        a {
+          display: block;
+          padding: 0 0 .5rem;
+          margin-bottom: 2rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    } 
+  }
+}
+
+.section-about {
+  background-image: linear-gradient(rgba(36, 40, 47, 0.96), rgba(36, 40, 47, 0.96)), url('../img/bg-about-1.png');
+  background-position: bottom;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: linear-gradient(rgba(36, 40, 47, 0.96), rgba(36, 40, 47, 0.96)), url('../img/bg-about-2.png');
+  }
+
+  .wrapper {
+    padding: 9rem 1.8rem 10.5rem;
+
+    @include respond(tab-port) {
+      padding: 6rem 1.8rem 7.5rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      padding-bottom: 1.6rem;
+      color: $color-white;
+      text-align: left;
+
+      @include respond(tab-port) {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      max-width: 79.5rem;
+      line-height: 2.4rem;
+      color: $color-white;
+    }
+  }
+}
+
+.section-management {
+  text-align: center;
+  padding: 0 1.8rem 0;
+
+  h2 {
+    padding-top: 15.3rem;
+
+    @include respond(tab-port) {
+      padding-top: 8.3rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 7.8rem;
+      border-bottom: 2px solid $color-gold;
+      transform: translateX(-50%);
+    }
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 3rem;
+    max-width: $wrapper-width-2;   
+
+
+    @include respond(tab-port) {
+      justify-content: space-around;
+    }
+  }
+
+  .manager-card {
+    max-width: 31rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 2.5rem;
+    }
+
+    .manager-photo {
+      max-width: 31rem;
+  
+      & img {
+        width: 100%;
+      }
+    }
+
+    .manager-info {
+      padding: 2.5rem 1rem 0;
+      justify-content: space-between;
+
+      .manager-name {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: $color-dark-blue;
+        padding-bottom: 1rem;
+      }
+
+      .manager-position {
+        color: $color-gold;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .btn {
+    margin: 4rem 0 3rem;
+
+    @include respond(tab-port) {
+      margin: 3rem 0 3rem;
+    }
+  }
+}
+
+.section-reviews {
+  background-color: $color-light-grey;
+
+  .wrapper {
+    max-width: $wrapper-width-2;
+    position: relative;
+
+    @include respond(tab-land) {
+      margin: 0 1.8rem 0;
+    }
+  }
+
+  h2 {
+    padding-top: 12rem;
+
+    @include respond(tab-port) {
+      padding-top: 7rem;
+    }
+
+    &::after {
+      border-bottom: 2px solid $color-dark-blue;
+    }
+  }
+
+  .reviews-carousel {
+    max-width: 89rem;
+    margin: 0 auto;
+    position: static;
+  }
+
+  .slick-prev, .slick-next {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+
+    @include respond(tab-land) {
+      top: 45%;
+    }
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      transform: rotate(45deg);
+      visibility: visible;
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+
+    &::after {
+      border-left: 1px solid $color-dark-blue;
+      border-bottom: 1px solid $color-dark-blue;
+    }
+  }
+
+  .slick-next {
+    right: 0;
+
+    &::after {
+      border-top: 1px solid $color-dark-blue;
+      border-right: 1px solid $color-dark-blue;
+    }
+  }
+
+  .carousel-item {
+    text-align: center;
+
+    .review-photo {
+      margin-top: 6.6rem;
+      border-radius: 50%;
+      width: 9rem;
+      display: inline-block;
+    }
+
+    .review-text {
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      margin-top: 3.6rem;
+      margin-bottom: 4.2rem;
+    }
+
+    .review-author {
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $color-gold;
+      margin-bottom: 1.3rem;
+    }
+
+    .review-position {
+      font-size: 1.4rem;
+      margin-bottom: 11.6rem;
+
+      @include respond(tab-land) {
+        margin-bottom: 6.6rem;
+      }
+    }
+  }
+}
+
+footer {
+
+  .wrapper {
+    max-width: $wrapper-width-2;
+    justify-content: space-between;
+    padding: 0 1.8rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+    
+  }
+  
+  .row-1 {
+    background-color: $color-dark-grey;
+
+    .wrapper {
+      @include respond(tab-port) {
+        justify-content: space-around;
+      }
+
+      & > div {
+        margin: 7.7rem 0 4rem; 
+
+        @include respond(tab-port) {
+          margin: 4.7rem 0 4rem;
+        }
+        
+        &:not(:last-child) {
+          @include respond(phone) {
+            margin-bottom: 0;
+          }
+        }
+      }
+  
+      .col-1, .col-3 {
+        max-width: 31.1rem;
+
+        @include respond(phone) {
+          max-width: 100%;
+        }
+      }
+  
+      .col-2 {
+        max-width: 19.6rem;
+
+        @include respond(phone) {
+          max-width: 100%;
+        }
+  
+        p {
+          line-height: 2rem;
+        }
+    
+        p:not(:last-child) {
+          margin-bottom: 2.2rem;
+        }
+      }
+  
+      h3, .new-subscription {
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: $color-gold;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+      }
+    
+      p {
+        font-size: 1.4rem;
+        color: $color-grey;
+        line-height: 2.4rem;
+      }
+    
+      form input[type=email] {
+        width: 100%;
+        background-color: $color-dark-grey;
+        border: 1px solid $color-grey;
+        padding: 1rem;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: $color-white;
+    
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover, 
+        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:active  {
+          -webkit-box-shadow: 0 0 0 3rem $color-dark-blue inset !important;
+          -webkit-text-fill-color: $color-white;
+        }
+
+        &::placeholder {
+          color: $color-grey;
+        }
+    
+        &:focus {
+          outline: 1px solid $color-gold;
+        }
+      }
+    
+      form input[type=submit] {
+        width: 100%;
+        background-color: $color-gold;
+        color: $color-white;
+        text-transform: uppercase;
+        border: none;
+        padding: 1rem 0;
+        transition: all .3s ease;
+    
+        &:hover,
+        &:active {
+          background-color: $color-light-grey;
+          outline: none;
+          cursor: pointer;
+          color: $color-gold;
+        }
+      }
+    }
+  }
+
+  .row-2 {
+    background-color: $color-dark-blue;
+
+    .wrapper {
+      padding: 1.5rem 1.8rem;
+      align-items: center;
+        
+      .copyright {
+        color: $color-grey;
+        font-size: 1.2rem;
+
+        @include respond(tab-port) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  
+    .social-media li a {
+      border: 1px solid $color-grey;
+      background-color: $color-dark-blue;
+  
+      &:hover {
+        border: 1px solid $color-gold;
+        background-color: $color-gold;
+  
+        i {
+          color: $color-white;
+        }
+      }
+  
+      i {
+        color: $color-grey;
+      }
+    }
+  }
+}
