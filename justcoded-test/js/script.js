@@ -15,10 +15,20 @@ $(document).ready(function(){
         }
     });
 
+    $('.email').on('focus', function(){
+        $('.form-message').html('');
+    });
+
     $('.submit').on('click', function(event){
         event.preventDefault();
-        const email = $('input[name="email"]').val();
-        const text = `<p class="new-subscription">Thank you for your subscription! Confirmation email has been sent to: ${email} </p>`;
-        $('form').html(text);
+        const emailElement = $('.email')[0];
+        const emailValue = $('.email').val();
+
+        if (!emailElement.checkValidity()) {
+            $('.form-message').html(emailElement.validationMessage);
+        } else {
+            const text = `<p class="new-subscription">Thank you for your subscription! Confirmation email has been sent to: ${emailValue} </p>`;
+            $('form').html(text);
+        }
     });
 });
